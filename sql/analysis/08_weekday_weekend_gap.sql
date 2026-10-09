@@ -1,0 +1,1 @@
+WITH profiles AS (SELECT station_id,AVG(ridership) FILTER(WHERE EXTRACT(ISODOW FROM day)<6) AS weekday,AVG(ridership) FILTER(WHERE EXTRACT(ISODOW FROM day)>=6) AS weekend FROM station_daily_stats GROUP BY 1) SELECT *,weekday/NULLIF(weekend,0) AS ratio FROM profiles ORDER BY ratio DESC NULLS LAST;

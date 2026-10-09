@@ -1,0 +1,2 @@
+import {isDiamondRoute,routeSymbol,routeLabel,routeColor,routeTextColor} from "../lib/mta/route-display";
+export default function RouteBullet({id}:{id:string}){return <svg className="route-bullet" viewBox="0 0 40 40" role="img" aria-label={routeLabel(id)}>{isDiamondRoute(id)?<polygon points="20,1 39,20 20,39 1,20" fill={routeColor(id)}/>:<circle cx="20" cy="20" r="19" fill={routeColor(id)}/>}<text x="20" y="27" textAnchor="middle" fill={routeTextColor(id)} fontSize="23" fontFamily="Arial, sans-serif" fontWeight="700">{routeSymbol(id)}</text></svg>}

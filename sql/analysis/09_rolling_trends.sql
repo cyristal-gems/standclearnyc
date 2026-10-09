@@ -1,0 +1,1 @@
+SELECT *,AVG(ridership) OVER(PARTITION BY station_id ORDER BY day::timestamp RANGE BETWEEN INTERVAL '6 days' PRECEDING AND CURRENT ROW) AS rolling_7,COUNT(*) OVER(PARTITION BY station_id ORDER BY day::timestamp RANGE BETWEEN INTERVAL '6 days' PRECEDING AND CURRENT ROW) AS observed_days FROM station_daily_stats;

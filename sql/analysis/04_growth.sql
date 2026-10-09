@@ -1,0 +1,1 @@
+WITH periods AS (SELECT station_id,DATE_TRUNC('month',day) AS month,AVG(ridership) AS average_day,COUNT(*) AS days FROM station_daily_stats GROUP BY 1,2) SELECT *,average_day/NULLIF(LAG(average_day) OVER(PARTITION BY station_id ORDER BY month),0)-1 AS change FROM periods; -- Partial months require coverage review.

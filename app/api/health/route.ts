@@ -1,0 +1,2 @@
+import {getPool} from "../../../lib/db";
+export async function GET(){if(!process.env.DATABASE_URL?.trim())return Response.json({status:"ok",database:"not configured",historicalAnalytics:"unavailable"},{headers:{"Cache-Control":"no-store"}});try{await getPool().query("SELECT 1");return Response.json({status:"ok",database:"connected"},{headers:{"Cache-Control":"no-store"}})}catch{return Response.json({status:"degraded",database:"unavailable"},{status:503,headers:{"Cache-Control":"no-store"}})}}
