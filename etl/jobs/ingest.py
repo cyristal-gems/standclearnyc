@@ -19,7 +19,8 @@ class Rider(BaseModel):
     payment_method:str=Field(min_length=1)
     fare_class_category:str=Field(min_length=1)
     ridership:Decimal=Field(ge=0)
-    transfers:Decimal=Field(ge=0)
+    # The official source includes signed transfer values; preserve them verbatim.
+    transfers:Decimal
     transit_mode:str
 
 def extract(client:httpx.Client,dataset:str,params:dict):

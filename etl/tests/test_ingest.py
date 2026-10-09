@@ -38,3 +38,8 @@ def test_postgres_upsert_is_idempotent_and_updates_changed_values():
 def test_official_brooklyn_borough_code(borough):
     row={"complex_id":"120","stop_name":"Borough Hall","borough":borough,"latitude":"40.69","longitude":"-73.99","daytime_routes":"2 3","gtfs_stop_ids":"232","ada":"1"}
     assert normalize_station(row)["borough"] == "Brooklyn"
+
+def test_signed_official_transfer_value_is_preserved():
+    rider=Rider(station_complex_id="629",transit_timestamp="2026-09-01T19:00:00",payment_method="omny",fare_class_category="OMNY - Fair Fare",ridership="14.0",transfers="-1.0",transit_mode="subway")
+    assert rider.transfers == -1
+    assert rider.ridership == 14
