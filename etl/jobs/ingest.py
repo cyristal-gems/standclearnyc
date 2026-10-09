@@ -11,7 +11,7 @@ from etl.validation import Station
 
 STATIONS="5f5g-n3cz"
 RIDERSHIP="5wq4-mkjj"
-BOROUGHS={"M":"Manhattan","B":"Brooklyn","Q":"Queens","Bx":"Bronx","SI":"Staten Island"}
+BOROUGHS={"M":"Manhattan","B":"Brooklyn","Bk":"Brooklyn","Q":"Queens","Bx":"Bronx","SI":"Staten Island"}
 log=logging.getLogger(__name__)
 class Rider(BaseModel):
     station_complex_id:str=Field(min_length=1)

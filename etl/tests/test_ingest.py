@@ -33,3 +33,8 @@ def test_postgres_upsert_is_idempotent_and_updates_changed_values():
         finally:
             transaction.rollback()
     engine.dispose()
+
+@pytest.mark.parametrize("borough", ["Bk", "B"])
+def test_official_brooklyn_borough_code(borough):
+    row={"complex_id":"120","stop_name":"Borough Hall","borough":borough,"latitude":"40.69","longitude":"-73.99","daytime_routes":"2 3","gtfs_stop_ids":"232","ada":"1"}
+    assert normalize_station(row)["borough"] == "Brooklyn"
