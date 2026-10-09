@@ -35,6 +35,7 @@ Stand Clear of the Closing Doors, Please! brings New York City transit informati
 
 ## 💁🏽‍♀️ Contact
 
-- [linkedin.com/in/cyristalj](https://www.linkedin.com/in/cyristalj)
-- [github.com/cyristal-gems](https://github.com/cyristal-gems)
-- [cyrisjoseph@outlook.com](mailto:cyrisjoseph@outlook.com)
+- **LinkedIn:** [linkedin.com/in/cyristalj](https://www.linkedin.com/in/cyristalj)
+- **GitHub:** [github.com/cyristal-gems](https://github.com/cyristal-gems)
+- **Email:** [cyrisjoseph@outlook.com](mailto:cyrisjoseph@outlook.com)
+
