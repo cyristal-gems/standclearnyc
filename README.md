@@ -39,3 +39,8 @@ Stand Clear of the Closing Doors, Please! brings New York City transit informati
 - **GitHub:** [github.com/cyristal-gems](https://github.com/cyristal-gems)
 - **Email:** [cyrisjoseph@outlook.com](mailto:cyrisjoseph@outlook.com)
 
+## License and Third-Party Notices
+
+Copyright © 2026 Cyristal Joseph. All rights reserved. The original application code and title artwork are not licensed under MIT or any other open-source license.
+
+MTA data and intellectual property, fonts, artwork, and software dependencies remain subject to their respective terms and licenses, including MIT where applicable to third-party dependencies. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and details.
