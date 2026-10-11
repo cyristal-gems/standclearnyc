@@ -19,7 +19,6 @@ This document records attribution and source information. It does not replace th
 | Third-party material | Applicable license or terms | Attribution and usage notes |
 | --- | --- | --- |
 | Permanent Marker font | Apache License 2.0 | Copyright 2010 Font Diner, Inc. The original license is preserved in [public/fonts/LICENSE.txt](public/fonts/LICENSE.txt). |
-| Train artwork: `public/train.webp` and derived `public/train-still.png` | No third-party license asserted | Supplied by the project owner, who reports finding it through Google Images. This project does not grant permission to redistribute the artwork. |
 | MTA route, station, and live data | MTA data terms | See [MTA developer resources](https://www.mta.info/developers) and the linked feed terms. Access to data does not grant a license to MTA artwork or trademarks. |
 | MTA logos, map artwork, and official symbols | Separate MTA permission required | This project does not assert a license to official MTA artwork. Custom route badges do not grant permission to use MTA intellectual property. |
 | OpenStreetMap basemap data | ODbL 1.0 | See [OpenStreetMap copyright and attribution](https://www.openstreetmap.org/copyright). Attribution remains visible on the map. Tile service policies also apply. |

@@ -1,6 +1,6 @@
 # Public asset inventory
 
-- `public/train.webp`: user-supplied animated loading-screen train found through Google Images. No redistribution license is asserted by this project.
+- `public/train.webp`: user-supplied animated loading-screen train.
 - `public/train-still.png`: derived first frame for visitors who request reduced motion; same rights as train.webp.
 - `public/route-title-inline.svg`: original title artwork; rights retained. Used by both the loading screen and header.
 - `public/fonts/PermanentMarker.ttf`: graffiti font, Apache 2.0; complete license in public/fonts/LICENSE.txt.
