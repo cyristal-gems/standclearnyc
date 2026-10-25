@@ -21,8 +21,13 @@ z=zipfile.ZipFile(io.BytesIO(response.content))
 def rows(name):return csv.DictReader(io.TextIOWrapper(z.open(name),encoding='utf-8-sig'))
 routes={r['route_id']:r for r in rows('routes.txt')}
 stops={r['stop_id']:r for r in rows('stops.txt')}
+# Keep the renamed station current while upstream feeds catch up.
+for stop in stops.values():
+ if (stop['parent_station'] or stop['stop_id'])=='G05':stop['stop_name']='Jamaica Center-York College'
 service_date,weekday=weekday_services(list(rows('calendar.txt')),list(rows('calendar_dates.txt')) if 'calendar_dates.txt' in z.namelist() else [],datetime.date.today())
 trips={r['trip_id']:r for r in rows('trips.txt') if r['service_id'] in weekday}
+for trip in trips.values():
+ if trip['trip_headsign'].startswith('Jamaica Center'):trip['trip_headsign']='Jamaica Center-York College'
 seq=collections.defaultdict(list)
 for row in rows('stop_times.txt'):
  if row['trip_id'] in trips:seq[row['trip_id']].append(row)
